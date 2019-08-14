@@ -3,6 +3,12 @@ from bs4 import BeautifulSoup
 import time 
 from datetime import datetime
 import os
+try:
+  from conf import *
+  print("[+] Config file found\n")
+except ImportError:
+	print("[+] Config file not found\n")
+	sys.exit()
 
 CWD = os.getcwd()
 
@@ -25,9 +31,4 @@ def get_price(URL):
 	return f_price
 
 
-def load_options(f="opt.conf"):
-        if ( os.path.isfile(CWD+"/"+f)):
-                print("[+] Config file found\n")
-        else:
-                sys.exit()
 

@@ -4,8 +4,6 @@ from pyfiglet import Figlet
 
 print(Figlet(font='doom').renderText('Py_Scraper v1'))
 
-load_options()
-
 while (True):
 	time.sleep(COOLDOWN_TIME_SEC)
 	tic = time.time()
