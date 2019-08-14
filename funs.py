@@ -2,6 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import time 
 from datetime import datetime
+import os
+
+CWD = os.getcwd()
 
 def get_price(URL):
 	headers = {
@@ -20,3 +23,11 @@ def get_price(URL):
 	print("[+] Price found: %s" % f_price)
 
 	return f_price
+
+
+def load_options(f="opt.conf"):
+        if ( os.path.isfile(CWD+"/"+f)):
+                print("[+] Config file found\n")
+        else:
+                sys.exit()
+

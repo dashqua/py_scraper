@@ -3,9 +3,8 @@ from funs import *
 from pyfiglet import Figlet
 
 print(Figlet(font='doom').renderText('Py_Scraper v1'))
-URL = 'https://www.amazon.co.uk/Hydration-Bladder-Reservoir-Approved-Backpacking/dp/B07BVNQXCJ/ref=sr_1_16?keywords=hydration+bladder&qid=1565718054&s=gateway&sr=8-16'
-DUMP_FILE = "dump_file.log"
-COOLDOWN_TIME_SEC = 5
+
+load_options()
 
 while (True):
 	time.sleep(COOLDOWN_TIME_SEC)
